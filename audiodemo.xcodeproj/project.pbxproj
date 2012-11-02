@@ -21,6 +21,11 @@
 		4332E8B21642DAF4003A3EDF /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4332E8931642DAF4003A3EDF /* Foundation.framework */; };
 		4332E8BA1642DAF4003A3EDF /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 4332E8B81642DAF4003A3EDF /* InfoPlist.strings */; };
 		4332E8BD1642DAF4003A3EDF /* audiodemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4332E8BC1642DAF4003A3EDF /* audiodemoTests.m */; };
+		4332E8C91642DBEB003A3EDF /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4332E8C81642DBEB003A3EDF /* MainViewController.m */; };
+		4332E8D01642DC6B003A3EDF /* Helper.m in Sources */ = {isa = PBXBuildFile; fileRef = 4332E8CF1642DC6B003A3EDF /* Helper.m */; };
+		4332E8D716436009003A3EDF /* MediaPlayerDemoListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4332E8D616436009003A3EDF /* MediaPlayerDemoListViewController.m */; };
+		4332E8EB16439EDB003A3EDF /* BaseListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4332E8EA16439EDB003A3EDF /* BaseListViewController.m */; };
+		4332E8F11643BF53003A3EDF /* AudioItemListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4332E8F01643BF53003A3EDF /* AudioItemListViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +58,16 @@
 		4332E8B91642DAF4003A3EDF /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		4332E8BB1642DAF4003A3EDF /* audiodemoTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = audiodemoTests.h; sourceTree = "<group>"; };
 		4332E8BC1642DAF4003A3EDF /* audiodemoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = audiodemoTests.m; sourceTree = "<group>"; };
+		4332E8C71642DBEB003A3EDF /* MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
+		4332E8C81642DBEB003A3EDF /* MainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
+		4332E8CE1642DC6B003A3EDF /* Helper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Helper.h; sourceTree = "<group>"; };
+		4332E8CF1642DC6B003A3EDF /* Helper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Helper.m; sourceTree = "<group>"; };
+		4332E8D516436009003A3EDF /* MediaPlayerDemoListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MediaPlayerDemoListViewController.h; sourceTree = "<group>"; };
+		4332E8D616436009003A3EDF /* MediaPlayerDemoListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MediaPlayerDemoListViewController.m; sourceTree = "<group>"; };
+		4332E8E916439EDB003A3EDF /* BaseListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseListViewController.h; sourceTree = "<group>"; };
+		4332E8EA16439EDB003A3EDF /* BaseListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseListViewController.m; sourceTree = "<group>"; };
+		4332E8EF1643BF53003A3EDF /* AudioItemListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AudioItemListViewController.h; sourceTree = "<group>"; };
+		4332E8F01643BF53003A3EDF /* AudioItemListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AudioItemListViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,9 +127,16 @@
 		4332E8971642DAF4003A3EDF /* audiodemo */ = {
 			isa = PBXGroup;
 			children = (
+				4332E8C61642DB9F003A3EDF /* MediaPlayer */,
 				4332E8A01642DAF4003A3EDF /* AppDelegate.h */,
 				4332E8A11642DAF4003A3EDF /* AppDelegate.m */,
 				4332E8981642DAF4003A3EDF /* Supporting Files */,
+				4332E8C71642DBEB003A3EDF /* MainViewController.h */,
+				4332E8C81642DBEB003A3EDF /* MainViewController.m */,
+				4332E8E916439EDB003A3EDF /* BaseListViewController.h */,
+				4332E8EA16439EDB003A3EDF /* BaseListViewController.m */,
+				4332E8CE1642DC6B003A3EDF /* Helper.h */,
+				4332E8CF1642DC6B003A3EDF /* Helper.m */,
 			);
 			path = audiodemo;
 			sourceTree = "<group>";
@@ -150,6 +172,17 @@
 				4332E8B81642DAF4003A3EDF /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		4332E8C61642DB9F003A3EDF /* MediaPlayer */ = {
+			isa = PBXGroup;
+			children = (
+				4332E8D516436009003A3EDF /* MediaPlayerDemoListViewController.h */,
+				4332E8D616436009003A3EDF /* MediaPlayerDemoListViewController.m */,
+				4332E8EF1643BF53003A3EDF /* AudioItemListViewController.h */,
+				4332E8F01643BF53003A3EDF /* AudioItemListViewController.m */,
+			);
+			path = MediaPlayer;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -263,6 +296,11 @@
 			files = (
 				4332E89E1642DAF4003A3EDF /* main.m in Sources */,
 				4332E8A21642DAF4003A3EDF /* AppDelegate.m in Sources */,
+				4332E8C91642DBEB003A3EDF /* MainViewController.m in Sources */,
+				4332E8D01642DC6B003A3EDF /* Helper.m in Sources */,
+				4332E8D716436009003A3EDF /* MediaPlayerDemoListViewController.m in Sources */,
+				4332E8EB16439EDB003A3EDF /* BaseListViewController.m in Sources */,
+				4332E8F11643BF53003A3EDF /* AudioItemListViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -429,6 +467,7 @@
 				4332E8C21642DAF4003A3EDF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		4332E8C31642DAF4003A3EDF /* Build configuration list for PBXNativeTarget "audiodemoTests" */ = {
 			isa = XCConfigurationList;
@@ -437,6 +476,7 @@
 				4332E8C51642DAF4003A3EDF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
