@@ -26,6 +26,10 @@
 		4332E8D716436009003A3EDF /* MediaPlayerDemoListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4332E8D616436009003A3EDF /* MediaPlayerDemoListViewController.m */; };
 		4332E8EB16439EDB003A3EDF /* BaseListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4332E8EA16439EDB003A3EDF /* BaseListViewController.m */; };
 		4332E8F11643BF53003A3EDF /* AudioItemListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4332E8F01643BF53003A3EDF /* AudioItemListViewController.m */; };
+		4332E8F31643C215003A3EDF /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4332E8F21643C215003A3EDF /* MediaPlayer.framework */; };
+		4332E8F51643C21D003A3EDF /* CoreAudio.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4332E8F41643C21D003A3EDF /* CoreAudio.framework */; };
+		4332E8F81643C226003A3EDF /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4332E8F61643C226003A3EDF /* AudioToolbox.framework */; };
+		4332E8FB1643C255003A3EDF /* MediaToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4332E8FA1643C255003A3EDF /* MediaToolbox.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -68,6 +72,10 @@
 		4332E8EA16439EDB003A3EDF /* BaseListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseListViewController.m; sourceTree = "<group>"; };
 		4332E8EF1643BF53003A3EDF /* AudioItemListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AudioItemListViewController.h; sourceTree = "<group>"; };
 		4332E8F01643BF53003A3EDF /* AudioItemListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AudioItemListViewController.m; sourceTree = "<group>"; };
+		4332E8F21643C215003A3EDF /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
+		4332E8F41643C21D003A3EDF /* CoreAudio.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreAudio.framework; path = System/Library/Frameworks/CoreAudio.framework; sourceTree = SDKROOT; };
+		4332E8F61643C226003A3EDF /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		4332E8FA1643C255003A3EDF /* MediaToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaToolbox.framework; path = System/Library/Frameworks/MediaToolbox.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,6 +83,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4332E8FB1643C255003A3EDF /* MediaToolbox.framework in Frameworks */,
+				4332E8F81643C226003A3EDF /* AudioToolbox.framework in Frameworks */,
+				4332E8F51643C21D003A3EDF /* CoreAudio.framework in Frameworks */,
+				4332E8F31643C215003A3EDF /* MediaPlayer.framework in Frameworks */,
 				4332E8921642DAF4003A3EDF /* UIKit.framework in Frameworks */,
 				4332E8941642DAF4003A3EDF /* Foundation.framework in Frameworks */,
 				4332E8961642DAF4003A3EDF /* CoreGraphics.framework in Frameworks */,
@@ -97,6 +109,10 @@
 		4332E8821642DAF3003A3EDF = {
 			isa = PBXGroup;
 			children = (
+				4332E8FA1643C255003A3EDF /* MediaToolbox.framework */,
+				4332E8F61643C226003A3EDF /* AudioToolbox.framework */,
+				4332E8F41643C21D003A3EDF /* CoreAudio.framework */,
+				4332E8F21643C215003A3EDF /* MediaPlayer.framework */,
 				4332E8971642DAF4003A3EDF /* audiodemo */,
 				4332E8B51642DAF4003A3EDF /* audiodemoTests */,
 				4332E8901642DAF4003A3EDF /* Frameworks */,
