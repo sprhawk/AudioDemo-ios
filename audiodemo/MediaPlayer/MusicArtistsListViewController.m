@@ -1,21 +1,22 @@
 //
-//  AudioItemListViewController.m
+//  MusicArtistsListViewController.m
 //  audiodemo
 //
 //  Created by YANG HONGBO on 2012-11-2.
 //  Copyright (c) 2012年 YANG HONGBO. All rights reserved.
 //
 
-#import "AudioItemListViewController.h"
+#import "MusicArtistsListViewController.h"
 #import <MediaPlayer/MediaPlayer.h>
+#import "AudioCollectionListViewController.h"
 
-@interface AudioItemListViewController ()
-@property (nonatomic, retain, readwrite) NSArray * items;
-@property (nonatomic, retain, readwrite) NSArray * itemSections;
-@property (nonatomic, retain, readwrite) NSArray * itemSectionTitles;
+@interface MusicArtistsListViewController ()
+@property (nonatomic, retain, readwrite) NSArray * collections;
+@property (nonatomic, retain, readwrite) NSArray * collectionSections;
+@property (nonatomic, retain, readwrite) NSArray * collectionSectionTitles;
 @end
 
-@implementation AudioItemListViewController
+@implementation MusicArtistsListViewController
 
 - (id)initWithStyle:(UITableViewStyle)style
 {
@@ -35,21 +36,22 @@
  
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+    
     static NSString *CellIdentifier = @"Cell";
     [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:CellIdentifier];
     
     MPMediaQuery * query = [MPMediaQuery songsQuery];
+    [query setGroupingType:MPMediaGroupingArtist];
     
-    self.items = query.items;
-    self.itemSections = query.itemSections;
+    self.collections = query.collections;
+    self.collectionSections = query.collectionSections;
     
-    NSMutableArray * titles = [NSMutableArray arrayWithCapacity:[self.itemSections count]];
-    for (MPMediaQuerySection * sec in self.itemSections) {
+    NSMutableArray * titles = [NSMutableArray arrayWithCapacity:[self.collectionSections count]];
+    for (MPMediaQuerySection * sec in self.collectionSections) {
         [titles addObject:sec.title];
     }
     
-    self.itemSectionTitles = [titles copy] ;
-    
+    self.collectionSectionTitles = [titles copy] ;
 }
 
 - (void)didReceiveMemoryWarning
@@ -63,19 +65,19 @@
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
     // Return the number of sections.
-    return [self.itemSections count];
+    return [self.collectionSections count];
 }
 
 - (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section
 {
     MPMediaQuerySection * sec = nil;
-    sec = self.itemSections[section];
+    sec = self.collectionSections[section];
     return sec.title;
 }
 
 - (NSArray *)sectionIndexTitlesForTableView:(UITableView *)tableView
 {
-    return self.itemSectionTitles;
+    return self.collectionSectionTitles;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView sectionForSectionIndexTitle:(NSString *)title atIndex:(NSInteger)index
@@ -86,7 +88,7 @@
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     // Return the number of rows in the section.
-    MPMediaQuerySection * sec = self.itemSections[section];
+    MPMediaQuerySection * sec = self.collectionSections[section];
     return sec.range.length;
 }
 
@@ -96,11 +98,13 @@
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
     
     // Configure the cell...
-    MPMediaQuerySection * sec = self.itemSections[indexPath.section];
-    MPMediaItem * mi = self.items[sec.range.location + indexPath.row];
-    cell.textLabel.text = [mi valueForProperty:MPMediaItemPropertyTitle];
+    MPMediaQuerySection * sec = self.collectionSections[indexPath.section];
+    MPMediaItemCollection * mic = self.collections[sec.range.location + indexPath.row];
+    MPMediaItem * mi = [mic representativeItem];
+    cell.textLabel.text = [mi valueForProperty:MPMediaItemPropertyArtist];
     return cell;
 }
+
 
 /*
 // Override to support conditional editing of the table view.
@@ -145,10 +149,11 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    MPMediaItem * item = self.items[indexPath.row];
-    NSURL * url = [item valueForProperty:MPMediaItemPropertyAssetURL];
-    MPMoviePlayerViewController * ctrl = [[MPMoviePlayerViewController alloc] initWithContentURL:url];
-    [self presentMoviePlayerViewControllerAnimated:ctrl];
+    MPMediaQuerySection * sec = self.collectionSections[indexPath.section];
+    MPMediaItemCollection * mic = self.collections[sec.range.location + indexPath.row];
+    AudioCollectionListViewController * ctrl = [[AudioCollectionListViewController alloc] init];
+    ctrl.itemCollection = mic;
+    [self.navigationController pushViewController:ctrl animated:YES];
 }
 
 @end

@@ -1,21 +1,18 @@
 //
-//  AudioItemListViewController.m
+//  AudioCollectionListViewController.m
 //  audiodemo
 //
-//  Created by YANG HONGBO on 2012-11-2.
+//  Created by YANG HONGBO on 2012-11-4.
 //  Copyright (c) 2012年 YANG HONGBO. All rights reserved.
 //
 
-#import "AudioItemListViewController.h"
-#import <MediaPlayer/MediaPlayer.h>
+#import "AudioCollectionListViewController.h"
 
-@interface AudioItemListViewController ()
+@interface AudioCollectionListViewController ()
 @property (nonatomic, retain, readwrite) NSArray * items;
-@property (nonatomic, retain, readwrite) NSArray * itemSections;
-@property (nonatomic, retain, readwrite) NSArray * itemSectionTitles;
 @end
 
-@implementation AudioItemListViewController
+@implementation AudioCollectionListViewController
 
 - (id)initWithStyle:(UITableViewStyle)style
 {
@@ -35,21 +32,10 @@
  
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+    
     static NSString *CellIdentifier = @"Cell";
     [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:CellIdentifier];
-    
-    MPMediaQuery * query = [MPMediaQuery songsQuery];
-    
-    self.items = query.items;
-    self.itemSections = query.itemSections;
-    
-    NSMutableArray * titles = [NSMutableArray arrayWithCapacity:[self.itemSections count]];
-    for (MPMediaQuerySection * sec in self.itemSections) {
-        [titles addObject:sec.title];
-    }
-    
-    self.itemSectionTitles = [titles copy] ;
-    
+
 }
 
 - (void)didReceiveMemoryWarning
@@ -58,36 +44,26 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (NSArray *)items
+{
+    if (nil == _items) {
+        self.items = self.itemCollection.items;
+    }
+    return _items;
+}
+
 #pragma mark - Table view data source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
     // Return the number of sections.
-    return [self.itemSections count];
-}
-
-- (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section
-{
-    MPMediaQuerySection * sec = nil;
-    sec = self.itemSections[section];
-    return sec.title;
-}
-
-- (NSArray *)sectionIndexTitlesForTableView:(UITableView *)tableView
-{
-    return self.itemSectionTitles;
-}
-
-- (NSInteger)tableView:(UITableView *)tableView sectionForSectionIndexTitle:(NSString *)title atIndex:(NSInteger)index
-{
-    return index;
+    return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     // Return the number of rows in the section.
-    MPMediaQuerySection * sec = self.itemSections[section];
-    return sec.range.length;
+    return self.items.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -96,9 +72,9 @@
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
     
     // Configure the cell...
-    MPMediaQuerySection * sec = self.itemSections[indexPath.section];
-    MPMediaItem * mi = self.items[sec.range.location + indexPath.row];
-    cell.textLabel.text = [mi valueForProperty:MPMediaItemPropertyTitle];
+    MPMediaItem * item = self.items[indexPath.row];
+    NSString * title = [item valueForProperty:MPMediaItemPropertyTitle];
+    cell.textLabel.text = title;
     return cell;
 }
 

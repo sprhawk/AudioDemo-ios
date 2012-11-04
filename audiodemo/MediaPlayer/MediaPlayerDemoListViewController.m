@@ -22,6 +22,7 @@
     if (self) {
         // Custom initialization
         [self addViewControllerClassName:@"AudioItemListViewController" classDescription:@"Audio Items"];
+        [self addViewControllerClassName:@"MusicArtistsListViewController" classDescription:@"Music Artists"];
     }
     return self;
 }

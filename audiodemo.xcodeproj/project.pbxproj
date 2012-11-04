@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		431353CD16469E12003A5F4D /* AudioCollectionListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 431353CC16469E12003A5F4D /* AudioCollectionListViewController.m */; };
 		4332E8921642DAF4003A3EDF /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4332E8911642DAF4003A3EDF /* UIKit.framework */; };
 		4332E8941642DAF4003A3EDF /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4332E8931642DAF4003A3EDF /* Foundation.framework */; };
 		4332E8961642DAF4003A3EDF /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4332E8951642DAF4003A3EDF /* CoreGraphics.framework */; };
@@ -30,6 +31,7 @@
 		4332E8F51643C21D003A3EDF /* CoreAudio.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4332E8F41643C21D003A3EDF /* CoreAudio.framework */; };
 		4332E8F81643C226003A3EDF /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4332E8F61643C226003A3EDF /* AudioToolbox.framework */; };
 		4332E8FB1643C255003A3EDF /* MediaToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4332E8FA1643C255003A3EDF /* MediaToolbox.framework */; };
+		4332E8FE1643D2CB003A3EDF /* MusicArtistsListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4332E8FD1643D2CB003A3EDF /* MusicArtistsListViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,6 +45,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		431353CB16469E12003A5F4D /* AudioCollectionListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AudioCollectionListViewController.h; sourceTree = "<group>"; };
+		431353CC16469E12003A5F4D /* AudioCollectionListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AudioCollectionListViewController.m; sourceTree = "<group>"; };
 		4332E88D1642DAF4003A3EDF /* audiodemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = audiodemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4332E8911642DAF4003A3EDF /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		4332E8931642DAF4003A3EDF /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -76,6 +80,8 @@
 		4332E8F41643C21D003A3EDF /* CoreAudio.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreAudio.framework; path = System/Library/Frameworks/CoreAudio.framework; sourceTree = SDKROOT; };
 		4332E8F61643C226003A3EDF /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		4332E8FA1643C255003A3EDF /* MediaToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaToolbox.framework; path = System/Library/Frameworks/MediaToolbox.framework; sourceTree = SDKROOT; };
+		4332E8FC1643D2CB003A3EDF /* MusicArtistsListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MusicArtistsListViewController.h; sourceTree = "<group>"; };
+		4332E8FD1643D2CB003A3EDF /* MusicArtistsListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MusicArtistsListViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -197,6 +203,10 @@
 				4332E8D616436009003A3EDF /* MediaPlayerDemoListViewController.m */,
 				4332E8EF1643BF53003A3EDF /* AudioItemListViewController.h */,
 				4332E8F01643BF53003A3EDF /* AudioItemListViewController.m */,
+				4332E8FC1643D2CB003A3EDF /* MusicArtistsListViewController.h */,
+				4332E8FD1643D2CB003A3EDF /* MusicArtistsListViewController.m */,
+				431353CB16469E12003A5F4D /* AudioCollectionListViewController.h */,
+				431353CC16469E12003A5F4D /* AudioCollectionListViewController.m */,
 			);
 			path = MediaPlayer;
 			sourceTree = "<group>";
@@ -317,6 +327,8 @@
 				4332E8D716436009003A3EDF /* MediaPlayerDemoListViewController.m in Sources */,
 				4332E8EB16439EDB003A3EDF /* BaseListViewController.m in Sources */,
 				4332E8F11643BF53003A3EDF /* AudioItemListViewController.m in Sources */,
+				4332E8FE1643D2CB003A3EDF /* MusicArtistsListViewController.m in Sources */,
+				431353CD16469E12003A5F4D /* AudioCollectionListViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
