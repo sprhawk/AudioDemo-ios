@@ -36,6 +36,9 @@
 		4332E8F81643C226003A3EDF /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4332E8F61643C226003A3EDF /* AudioToolbox.framework */; };
 		4332E8FB1643C255003A3EDF /* MediaToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4332E8FA1643C255003A3EDF /* MediaToolbox.framework */; };
 		4332E8FE1643D2CB003A3EDF /* MusicArtistsListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4332E8FD1643D2CB003A3EDF /* MusicArtistsListViewController.m */; };
+		434333BE16482A7D008DFB61 /* AudioUnitDemoListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 434333BD16482A7D008DFB61 /* AudioUnitDemoListViewController.m */; };
+		434333C216482AA2008DFB61 /* AudioUnitRemoteIOViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 434333C016482AA2008DFB61 /* AudioUnitRemoteIOViewController.m */; };
+		434333C316482AA2008DFB61 /* AudioUnitRemoteIOViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 434333C116482AA2008DFB61 /* AudioUnitRemoteIOViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -92,6 +95,11 @@
 		4332E8FA1643C255003A3EDF /* MediaToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaToolbox.framework; path = System/Library/Frameworks/MediaToolbox.framework; sourceTree = SDKROOT; };
 		4332E8FC1643D2CB003A3EDF /* MusicArtistsListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MusicArtistsListViewController.h; sourceTree = "<group>"; };
 		4332E8FD1643D2CB003A3EDF /* MusicArtistsListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MusicArtistsListViewController.m; sourceTree = "<group>"; };
+		434333BC16482A7D008DFB61 /* AudioUnitDemoListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AudioUnitDemoListViewController.h; sourceTree = "<group>"; };
+		434333BD16482A7D008DFB61 /* AudioUnitDemoListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AudioUnitDemoListViewController.m; sourceTree = "<group>"; };
+		434333BF16482AA2008DFB61 /* AudioUnitRemoteIOViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AudioUnitRemoteIOViewController.h; sourceTree = "<group>"; };
+		434333C016482AA2008DFB61 /* AudioUnitRemoteIOViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AudioUnitRemoteIOViewController.m; sourceTree = "<group>"; };
+		434333C116482AA2008DFB61 /* AudioUnitRemoteIOViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AudioUnitRemoteIOViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -137,10 +145,6 @@
 		4332E8821642DAF3003A3EDF = {
 			isa = PBXGroup;
 			children = (
-				4332E8FA1643C255003A3EDF /* MediaToolbox.framework */,
-				4332E8F61643C226003A3EDF /* AudioToolbox.framework */,
-				4332E8F41643C21D003A3EDF /* CoreAudio.framework */,
-				4332E8F21643C215003A3EDF /* MediaPlayer.framework */,
 				4332E8971642DAF4003A3EDF /* audiodemo */,
 				4332E8B51642DAF4003A3EDF /* audiodemoTests */,
 				4332E8901642DAF4003A3EDF /* Frameworks */,
@@ -160,6 +164,10 @@
 		4332E8901642DAF4003A3EDF /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				4332E8FA1643C255003A3EDF /* MediaToolbox.framework */,
+				4332E8F61643C226003A3EDF /* AudioToolbox.framework */,
+				4332E8F41643C21D003A3EDF /* CoreAudio.framework */,
+				4332E8F21643C215003A3EDF /* MediaPlayer.framework */,
 				4332E8911642DAF4003A3EDF /* UIKit.framework */,
 				4332E8931642DAF4003A3EDF /* Foundation.framework */,
 				4332E8951642DAF4003A3EDF /* CoreGraphics.framework */,
@@ -171,6 +179,7 @@
 		4332E8971642DAF4003A3EDF /* audiodemo */ = {
 			isa = PBXGroup;
 			children = (
+				434333BB16482A44008DFB61 /* AudioUnit */,
 				4303E7561646B2EB002288D9 /* CoreAudio */,
 				4332E8C61642DB9F003A3EDF /* MediaPlayer */,
 				4332E8A01642DAF4003A3EDF /* AppDelegate.h */,
@@ -233,6 +242,18 @@
 				431353CC16469E12003A5F4D /* AudioCollectionListViewController.m */,
 			);
 			path = MediaPlayer;
+			sourceTree = "<group>";
+		};
+		434333BB16482A44008DFB61 /* AudioUnit */ = {
+			isa = PBXGroup;
+			children = (
+				434333BC16482A7D008DFB61 /* AudioUnitDemoListViewController.h */,
+				434333BD16482A7D008DFB61 /* AudioUnitDemoListViewController.m */,
+				434333BF16482AA2008DFB61 /* AudioUnitRemoteIOViewController.h */,
+				434333C016482AA2008DFB61 /* AudioUnitRemoteIOViewController.m */,
+				434333C116482AA2008DFB61 /* AudioUnitRemoteIOViewController.xib */,
+			);
+			path = AudioUnit;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -312,6 +333,7 @@
 				4332E8A81642DAF4003A3EDF /* Default-568h@2x.png in Resources */,
 				4303E7851647B6FD002288D9 /* sample.mp3 in Resources */,
 				4303E7B51647B902002288D9 /* AudioFileDemoViewController.xib in Resources */,
+				434333C316482AA2008DFB61 /* AudioUnitRemoteIOViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -357,6 +379,8 @@
 				431353CD16469E12003A5F4D /* AudioCollectionListViewController.m in Sources */,
 				4303E75A1646B2FD002288D9 /* CoreAudioDemoViewController.m in Sources */,
 				4303E7B41647B902002288D9 /* AudioFileDemoViewController.m in Sources */,
+				434333BE16482A7D008DFB61 /* AudioUnitDemoListViewController.m in Sources */,
+				434333C216482AA2008DFB61 /* AudioUnitRemoteIOViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

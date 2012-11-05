@@ -9,5 +9,6 @@
 #import <UIKit/UIKit.h>
 
 @interface BaseListViewController : UITableViewController
+- (void)registerViewControllers;
 - (void)addViewControllerClassName:(NSString *)className classDescription:(NSString *)description;
 @end

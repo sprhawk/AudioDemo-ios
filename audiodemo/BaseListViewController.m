@@ -24,9 +24,14 @@
     if (self) {
         // Custom initialization
         _viewControllers = [[NSMutableArray alloc] initWithCapacity:2];
-        
+        [self registerViewControllers];
     }
     return self;
+}
+
+- (void)registerViewControllers
+{
+    
 }
 
 - (void)addViewControllerClassName:(NSString *)className classDescription:(NSString *)description

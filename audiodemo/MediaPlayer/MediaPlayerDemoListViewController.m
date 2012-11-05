@@ -16,15 +16,10 @@
 
 @implementation MediaPlayerDemoListViewController
 
-- (id)initWithStyle:(UITableViewStyle)style
+- (void)registerViewControllers
 {
-    self = [super initWithStyle:style];
-    if (self) {
-        // Custom initialization
-        [self addViewControllerClassName:@"AudioItemListViewController" classDescription:@"Audio Items"];
-        [self addViewControllerClassName:@"MusicArtistsListViewController" classDescription:@"Music Artists"];
-    }
-    return self;
+    [self addViewControllerClassName:@"AudioItemListViewController" classDescription:@"Audio Items"];
+    [self addViewControllerClassName:@"MusicArtistsListViewController" classDescription:@"Music Artists"];
 }
 
 - (void)viewDidLoad

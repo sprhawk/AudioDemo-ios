@@ -16,19 +16,11 @@
 
 @implementation MainViewController
 
-- (id)initWithStyle:(UITableViewStyle)style
+- (void)registerViewControllers
 {
-    self = [super initWithStyle:style];
-    if (self) {
-        // Custom initialization
-
-        [self addViewControllerClassName:@"MediaPlayerDemoListViewController" classDescription:@"Media Player Demo List"];
-        [self addViewControllerClassName:@"CoreAudioDemoViewController" classDescription:@"Core Audio Demo"];
-    }
-    return self;
+    [self addViewControllerClassName:@"MediaPlayerDemoListViewController" classDescription:@"Media Player Demo List"];
+    [self addViewControllerClassName:@"CoreAudioDemoViewController" classDescription:@"Core Audio Demo"];
 }
-
-
 
 - (void)didReceiveMemoryWarning
 {

@@ -1,22 +1,22 @@
 //
-//  CoreAudioDemoViewController.m
+//  AudioUnitDemoListViewController.m
 //  audiodemo
 //
-//  Created by YANG HONGBO on 2012-11-4.
+//  Created by YANG HONGBO on 2012-11-6.
 //  Copyright (c) 2012年 YANG HONGBO. All rights reserved.
 //
 
-#import "CoreAudioDemoViewController.h"
+#import "AudioUnitDemoListViewController.h"
 
-@interface CoreAudioDemoViewController ()
+@interface AudioUnitDemoListViewController ()
 
 @end
 
-@implementation CoreAudioDemoViewController
+@implementation AudioUnitDemoListViewController
 
 - (void)registerViewControllers
 {
-    [self addViewControllerClassName:@"AudioFileDemoViewController" classDescription:@"Audio File"];
+        [self addViewControllerClassName:@"AudioUnitRemoteIOViewController" classDescription:@"Remote IO"];
 }
 
 - (void)viewDidLoad
