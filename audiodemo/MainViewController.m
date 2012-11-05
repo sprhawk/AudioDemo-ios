@@ -23,6 +23,7 @@
         // Custom initialization
 
         [self addViewControllerClassName:@"MediaPlayerDemoListViewController" classDescription:@"Media Player Demo List"];
+        [self addViewControllerClassName:@"CoreAudioDemoViewController" classDescription:@"Core Audio Demo"];
     }
     return self;
 }

@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4303E75A1646B2FD002288D9 /* CoreAudioDemoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4303E7591646B2FD002288D9 /* CoreAudioDemoViewController.m */; };
+		4303E7851647B6FD002288D9 /* sample.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 4303E7841647B6FD002288D9 /* sample.mp3 */; };
+		4303E7B41647B902002288D9 /* AudioFileDemoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4303E7B21647B902002288D9 /* AudioFileDemoViewController.m */; };
+		4303E7B51647B902002288D9 /* AudioFileDemoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4303E7B31647B902002288D9 /* AudioFileDemoViewController.xib */; };
 		431353CD16469E12003A5F4D /* AudioCollectionListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 431353CC16469E12003A5F4D /* AudioCollectionListViewController.m */; };
 		4332E8921642DAF4003A3EDF /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4332E8911642DAF4003A3EDF /* UIKit.framework */; };
 		4332E8941642DAF4003A3EDF /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4332E8931642DAF4003A3EDF /* Foundation.framework */; };
@@ -45,6 +49,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		4303E7581646B2FD002288D9 /* CoreAudioDemoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoreAudioDemoViewController.h; sourceTree = "<group>"; };
+		4303E7591646B2FD002288D9 /* CoreAudioDemoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoreAudioDemoViewController.m; sourceTree = "<group>"; };
+		4303E7841647B6FD002288D9 /* sample.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = sample.mp3; sourceTree = "<group>"; };
+		4303E7B11647B902002288D9 /* AudioFileDemoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AudioFileDemoViewController.h; sourceTree = "<group>"; };
+		4303E7B21647B902002288D9 /* AudioFileDemoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AudioFileDemoViewController.m; sourceTree = "<group>"; };
+		4303E7B31647B902002288D9 /* AudioFileDemoViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AudioFileDemoViewController.xib; sourceTree = "<group>"; };
 		431353CB16469E12003A5F4D /* AudioCollectionListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AudioCollectionListViewController.h; sourceTree = "<group>"; };
 		431353CC16469E12003A5F4D /* AudioCollectionListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AudioCollectionListViewController.m; sourceTree = "<group>"; };
 		4332E88D1642DAF4003A3EDF /* audiodemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = audiodemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -112,6 +122,18 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4303E7561646B2EB002288D9 /* CoreAudio */ = {
+			isa = PBXGroup;
+			children = (
+				4303E7581646B2FD002288D9 /* CoreAudioDemoViewController.h */,
+				4303E7591646B2FD002288D9 /* CoreAudioDemoViewController.m */,
+				4303E7B11647B902002288D9 /* AudioFileDemoViewController.h */,
+				4303E7B21647B902002288D9 /* AudioFileDemoViewController.m */,
+				4303E7B31647B902002288D9 /* AudioFileDemoViewController.xib */,
+			);
+			path = CoreAudio;
+			sourceTree = "<group>";
+		};
 		4332E8821642DAF3003A3EDF = {
 			isa = PBXGroup;
 			children = (
@@ -149,6 +171,7 @@
 		4332E8971642DAF4003A3EDF /* audiodemo */ = {
 			isa = PBXGroup;
 			children = (
+				4303E7561646B2EB002288D9 /* CoreAudio */,
 				4332E8C61642DB9F003A3EDF /* MediaPlayer */,
 				4332E8A01642DAF4003A3EDF /* AppDelegate.h */,
 				4332E8A11642DAF4003A3EDF /* AppDelegate.m */,
@@ -166,6 +189,7 @@
 		4332E8981642DAF4003A3EDF /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				4303E7841647B6FD002288D9 /* sample.mp3 */,
 				4332E8991642DAF4003A3EDF /* audiodemo-Info.plist */,
 				4332E89A1642DAF4003A3EDF /* InfoPlist.strings */,
 				4332E89D1642DAF4003A3EDF /* main.m */,
@@ -286,6 +310,8 @@
 				4332E8A41642DAF4003A3EDF /* Default.png in Resources */,
 				4332E8A61642DAF4003A3EDF /* Default@2x.png in Resources */,
 				4332E8A81642DAF4003A3EDF /* Default-568h@2x.png in Resources */,
+				4303E7851647B6FD002288D9 /* sample.mp3 in Resources */,
+				4303E7B51647B902002288D9 /* AudioFileDemoViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -329,6 +355,8 @@
 				4332E8F11643BF53003A3EDF /* AudioItemListViewController.m in Sources */,
 				4332E8FE1643D2CB003A3EDF /* MusicArtistsListViewController.m in Sources */,
 				431353CD16469E12003A5F4D /* AudioCollectionListViewController.m in Sources */,
+				4303E75A1646B2FD002288D9 /* CoreAudioDemoViewController.m in Sources */,
+				4303E7B41647B902002288D9 /* AudioFileDemoViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
