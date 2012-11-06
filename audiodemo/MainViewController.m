@@ -20,6 +20,7 @@
 {
     [self addViewControllerClassName:@"MediaPlayerDemoListViewController" classDescription:@"Media Player Demo List"];
     [self addViewControllerClassName:@"CoreAudioDemoViewController" classDescription:@"Core Audio Demo"];
+    [self addViewControllerClassName:@"AudioUnitDemoListViewController" classDescription:@"Audio Unit Demo"];
 }
 
 - (void)didReceiveMemoryWarning

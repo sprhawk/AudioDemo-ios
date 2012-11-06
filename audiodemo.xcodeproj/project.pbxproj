@@ -39,6 +39,7 @@
 		434333BE16482A7D008DFB61 /* AudioUnitDemoListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 434333BD16482A7D008DFB61 /* AudioUnitDemoListViewController.m */; };
 		434333C216482AA2008DFB61 /* AudioUnitRemoteIOViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 434333C016482AA2008DFB61 /* AudioUnitRemoteIOViewController.m */; };
 		434333C316482AA2008DFB61 /* AudioUnitRemoteIOViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 434333C116482AA2008DFB61 /* AudioUnitRemoteIOViewController.xib */; };
+		43BA2F2A164960A3009CF77D /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 43BA2F29164960A3009CF77D /* AVFoundation.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -100,6 +101,7 @@
 		434333BF16482AA2008DFB61 /* AudioUnitRemoteIOViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AudioUnitRemoteIOViewController.h; sourceTree = "<group>"; };
 		434333C016482AA2008DFB61 /* AudioUnitRemoteIOViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AudioUnitRemoteIOViewController.m; sourceTree = "<group>"; };
 		434333C116482AA2008DFB61 /* AudioUnitRemoteIOViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AudioUnitRemoteIOViewController.xib; sourceTree = "<group>"; };
+		43BA2F29164960A3009CF77D /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,6 +109,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				43BA2F2A164960A3009CF77D /* AVFoundation.framework in Frameworks */,
 				4332E8FB1643C255003A3EDF /* MediaToolbox.framework in Frameworks */,
 				4332E8F81643C226003A3EDF /* AudioToolbox.framework in Frameworks */,
 				4332E8F51643C21D003A3EDF /* CoreAudio.framework in Frameworks */,
@@ -164,6 +167,7 @@
 		4332E8901642DAF4003A3EDF /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				43BA2F29164960A3009CF77D /* AVFoundation.framework */,
 				4332E8FA1643C255003A3EDF /* MediaToolbox.framework */,
 				4332E8F61643C226003A3EDF /* AudioToolbox.framework */,
 				4332E8F41643C21D003A3EDF /* CoreAudio.framework */,
